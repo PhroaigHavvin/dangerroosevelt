@@ -6,11 +6,39 @@ $(document).ready(function(){
 			var hash = this.hash;
 
 			console.log(hash)
-			var offsetMenu = (hash != "#home") ? $(hash).offset().top-140 : 0;
+			var offsetMenu = (hash != "#home") ? $(hash).offset().top - 140 : 0;
 
 			$('html,body').animate({
 				scrollTop: offsetMenu
-			}, 800);
+			}, 1200);
 		}
 	});
+});
+
+$(window).scroll(function() {
+	var scroll = $(window).scrollTop();
+	var musicTop = $('#music').offset().top - 190;
+	var aboutTop = $('#about').offset().top - 500;
+	console.log(scroll)
+	console.log(aboutTop)
+	if (scroll < musicTop) {
+		$('#home-link').addClass('selected');
+		$('#music-link').removeClass('selected');
+		$('#about-link').removeClass('selected');
+	} 
+	else if (scroll >= musicTop && scroll < aboutTop) {
+		$('#home-link').removeClass('selected');
+		$('#music-link').addClass('selected');
+		$('#about-link').removeClass('selected');
+	}
+	else if (scroll >= aboutTop) {
+		$('#home-link').removeClass('selected');
+		$('#music-link').removeClass('selected');
+		$('#about-link').addClass('selected');
+	}
+	else {
+		$('#home-link').addClass('selected');
+		$('#music-link').removeClass('selected');
+		$('#about-link').removeClass('selected');
+	}
 });

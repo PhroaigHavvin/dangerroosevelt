@@ -16,6 +16,11 @@ body{
 
 a{
 	color: #999;
+	text-decoration: none;
+}
+
+a.selected, a:hover{
+	color: #eee;
 }
 
 a.svg {
