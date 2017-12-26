@@ -15,6 +15,10 @@ body{
 	margin: 0 0;
 }
 
+ul{
+	list-style-type: square;
+}
+
 a{
 	color: #999;
 	text-decoration: none;
@@ -70,7 +74,7 @@ a.svg:after {
 
 #social-media-menu{
 	overflow: hidden;
-	background-color: rgba(216, 203, 196, 0.5);
+	background-color: rgba(216, 203, 196, 0.3);
 	position: fixed;
 	top: 150px;
 	right: 15px;
