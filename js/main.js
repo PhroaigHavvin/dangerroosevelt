@@ -18,9 +18,8 @@ $(document).ready(function(){
 $(window).scroll(function() {
 	var scroll = $(window).scrollTop();
 	var musicTop = $('#music').offset().top - 190;
-	var aboutTop = $('#about').offset().top - 500;
-	console.log(scroll)
-	console.log(aboutTop)
+	var aboutTop = $('#about').offset().top - 400;
+
 	if (scroll < musicTop) {
 		$('#home-link').addClass('selected');
 		$('#music-link').removeClass('selected');

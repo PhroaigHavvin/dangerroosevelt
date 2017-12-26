@@ -87,6 +87,7 @@ a.svg:after {
 #about{
 	width: 800px;
 	margin: 0 auto;
+	margin-bottom: 250px;
 	text-align: justify;
 }
 
