@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 			var hash = this.hash;
 
-			console.log(hash)
 			var offsetMenu = (hash != "#home") ? $(hash).offset().top - 140 : 0;
 
 			$('html,body').animate({
