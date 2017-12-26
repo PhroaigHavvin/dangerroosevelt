@@ -12,6 +12,7 @@ body{
 	color: #999;
 	background-color: #12384d;
 	text-align: center;
+	margin: 0 0;
 }
 
 a{
@@ -39,7 +40,7 @@ a.svg:after {
 }
 
 .content-block{
-	margin: 250px auto;
+	margin: 125px auto 125px auto;
 }
 
 #top-header{
@@ -69,19 +70,39 @@ a.svg:after {
 
 #social-media-menu{
 	overflow: hidden;
-	background-color: #12384d;
+	background-color: rgba(216, 203, 196, 0.5);
 	position: fixed;
 	top: 150px;
-	right: 22px;
+	right: 15px;
+	padding: 10px 5px;
+	border-radius: 5px;
 }
 
 .social-media-icon{
 	margin-bottom: 5px;
 }
 
-#music-player{
+#facebook {
+	margin-top: 5px;
+}
+
+#instagram {
+	margin-bottom: 0;
+}
+
+#music-player, #facebook-wall{
 	width: 600px;
 	margin: 0 auto;
+}
+
+#home {
+	margin-top: 250px;
+}
+
+#music {
+	background-color: #bc5f2c;
+	width: 100%;
+	padding: 125px 0;
 }
 
 #about{
