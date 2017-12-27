@@ -1,4 +1,5 @@
 var animating = false;
+const supportsHover = window.matchMedia( "(hover:hover)" );
 
 $(document).ready(function(){
 	$("a").on('click', function(event){
@@ -7,7 +8,13 @@ $(document).ready(function(){
 
 			var hash = this.hash;
 
-			var offsetMenu = (hash != "#home") ? $(hash).offset().top - 140 : 0;
+			if (!supportsHover.matches){
+				clearSelected();
+			}
+
+			var menuHeight = $("#top-header").height();
+
+			var offsetMenu = (hash != "#home") ? $(hash).offset().top - menuHeight : 0;
 
 			animating = true;
 
@@ -23,6 +30,12 @@ $(window).scroll(function() {
 	var musicTop = $('#music').offset().top - 190;
 	var aboutTop = $('#about').offset().top - 350;
 	var atBottom = ($(window).scrollTop() + $(window).height() == $(document).height());
+
+	if(atBottom){
+		$('#home-link').removeClass('selected');
+		$('#music-link').removeClass('selected');
+		$('#about-link').addClass('selected');
+	}
 
 	if(!animating){
 		if (scroll < musicTop && !atBottom) {
@@ -40,10 +53,11 @@ $(window).scroll(function() {
 			$('#music-link').removeClass('selected');
 			$('#about-link').addClass('selected');
 		}
-		else {
-			$('#home-link').addClass('selected');
-			$('#music-link').removeClass('selected');
-			$('#about-link').removeClass('selected');
-		}
 	}
 });
+
+var clearSelected = function(){
+	$('#home-link').removeClass('selected');
+	$('#music-link').removeClass('selected');
+	$('#about-link').removeClass('selected')
+};

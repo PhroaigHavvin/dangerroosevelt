@@ -39,10 +39,6 @@ a.svg:after {
 	left: 0;
 }
 
-.content-block{
-	margin: 125px auto 125px auto;
-}
-
 #top-header{
 	background-color: #27343b;
 	box-shadow: 0 0 5px 0 #999;
@@ -52,6 +48,7 @@ a.svg:after {
 	left: 0;
 	margin: 0px 0px;
 	padding: 0px 0px;
+	z-index: 2;
 }
 
 #main-title{
@@ -80,13 +77,12 @@ a.svg:after {
 }
 
 #home {
-	margin-top: 250px;
+	z-index: 1;
 }
 
 #music {
 	background-color: #bc5f2c;
 	width: 100%;
-	padding: 125px 0;
 }
 
 #about{
@@ -105,6 +101,22 @@ a.svg:after {
 	img, object {
 		width: 48px;
 		height: 48px;
+	}
+
+	.content-block{
+		margin: 125px auto 125px auto;
+	}
+
+	#music {
+		padding: 125px 0;
+	}
+
+	#about {
+		padding-top: 125px;
+	}
+
+	#home {
+		margin-top: 250px;
 	}
 
 	#main-title{
@@ -133,19 +145,11 @@ a.svg:after {
 		margin-bottom: 0;
 	}
 
-	#soundcloud-48 {
+	#soundcloud-48, #desktop-player, #desktop-facebook {
 		display: block;
 	}
 
-	#soundcloud-24 {
-		display: none;
-	}
-
-	#desktop-player {
-		display: block;
-	}
-
-	#mobile-player {
+	#soundcloud-24, #mobile-player, #mobile-facebook, #tablet-facebook {
 		display: none;
 	}
 
@@ -156,7 +160,7 @@ a.svg:after {
 
 @media all and (max-width: 959px) and (min-width: 600px) {
 	body {
-		font-size: 2.9vw;
+		font-size: 2.2vw;
 	}
 
 	img, object {
@@ -164,12 +168,28 @@ a.svg:after {
 		height: 24px;
 	}
 
+	.content-block{
+		margin: 100px auto 100px auto;
+	}
+
+	#music {
+		padding: 100px 0;
+	}
+
+	#about {
+		padding-top: 100px;
+	}
+
+	#home {
+		margin-top: 200px;
+	}
+
 	#main-title{
-		font-size: 9vw;
+		font-size: 8vw;
 	}
 
 	#menu {
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 
 	#social-media-menu{
@@ -183,24 +203,16 @@ a.svg:after {
 		display: inline-block;
 	}
 
-	#soundcloud-48 {
+	#soundcloud-48, #desktop-player, #desktop-facebook, #mobile-facebook {
 		display: none;
 	}
 
-	#soundcloud-24 {
-		display: block;
-	}
-
-	#desktop-player {
-		display: none;
-	}
-
-	#mobile-player {
+	#soundcloud-24, #mobile-player, #tablet-facebook {
 		display: block;
 	}
 
 	#about-title{
-		font-size: 6vw;
+		font-size: 5vw;
 	}
 }
 
@@ -214,6 +226,22 @@ a.svg:after {
 		height: 24px;
 	}
 
+	.content-block{
+		margin: 75px auto 75px auto;
+	}
+
+	#music {
+		padding: 75px 0;
+	}
+
+	#about {
+		padding-top: 75px;
+	}
+
+	#home {
+		margin-top: 150px;
+	}
+
 	#main-title{
 		font-size: 9vw;
 	}
@@ -233,23 +261,21 @@ a.svg:after {
 		display: inline-block;
 	}
 
-	#soundcloud-48 {
+	#soundcloud-48, #desktop-player, #desktop-facebook, #tablet-facebook {
 		display: none;
 	}
 
-	#soundcloud-24 {
-		display: block;
-	}
-
-	#desktop-player {
-		display: none;
-	}
-
-	#mobile-player {
+	#soundcloud-24, #mobile-player, #mobile-facebook {
 		display: block;
 	}
 
 	#about-title{
 		font-size: 6vw;
 	}
+}
+
+@media (hover:none), (hover:on-demand) {
+    nav a:hover{
+        color: #999;
+    }
 }
