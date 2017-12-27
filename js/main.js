@@ -21,20 +21,21 @@ $(document).ready(function(){
 $(window).scroll(function() {
 	var scroll = $(window).scrollTop();
 	var musicTop = $('#music').offset().top - 190;
-	var aboutTop = $('#about').offset().top - 400;
+	var aboutTop = $('#about').offset().top - 350;
+	var atBottom = ($(window).scrollTop() + $(window).height() == $(document).height());
 
 	if(!animating){
-		if (scroll < musicTop) {
+		if (scroll < musicTop && !atBottom) {
 			$('#home-link').addClass('selected');
 			$('#music-link').removeClass('selected');
 			$('#about-link').removeClass('selected');
 		} 
-		else if (scroll >= musicTop && scroll < aboutTop) {
+		else if (scroll >= musicTop && scroll < aboutTop && !atBottom) {
 			$('#home-link').removeClass('selected');
 			$('#music-link').addClass('selected');
 			$('#about-link').removeClass('selected');
 		}
-		else if (scroll >= aboutTop) {
+		else if (scroll >= aboutTop || atBottom) {
 			$('#home-link').removeClass('selected');
 			$('#music-link').removeClass('selected');
 			$('#about-link').addClass('selected');

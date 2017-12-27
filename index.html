@@ -17,9 +17,20 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=177432619521848';
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="social-media-menu">
 		<div id="facebook" class="social-media-icon"><a href="http://www.facebook.com/dangerroosevelt"><img src="static/fb.png" width="48px" height="48px" /></a></div>
-		<div id="soundcloud" class="social-media-icon"><iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fdangerroosevelt&color=black_white&size=48" style="width: 48px; height: 48px;"></iframe></div>
+		<div id="soundcloud" class="social-media-icon">
+			<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fdangerroosevelt&color=black_white&size=48" style="width: 48px; height: 48px;" id="soundcloud-48"></iframe>
+			<iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fdangerroosevelt&color=black_white&size=24" style="width: 24px; height: 24px;" id="soundcloud-24"></iframe>
+		</div>
 		<div id="twitter" class="social-media-icon"><a href="http://www.twitter.com/DangerRoosevelt" class="svg">
 			<object data="static/twitter.svg" type="image/svg+xml" width="48px" height="48px">
   				<img src="static/twitter.png" width="48px" height="48px" />
@@ -39,12 +50,13 @@
 	</div>
 	<div id="home" class="content-block">
 		<div id="facebook-wall">
-			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FDangerRoosevelt%2F&tabs=timeline&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=177432619521848" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
 		</div>
 	</div>
 	<div id="music" class="content-block">
 		<div id="music-player">
-			<iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/369032054&amp;color=%2351504e&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+			<iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/369032054&amp;color=%2351504e&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" id="desktop-player"></iframe>
+			<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/369032054&amp;color=%23949890&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" id="mobile-player"></iframe>
 		</div>
 	</div>
 	<div id="about" class="content-block">
