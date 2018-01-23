@@ -76,7 +76,7 @@ a.svg:after {
 	border-radius: 5px;
 }
 
-#music-player, #facebook-wall{
+#music-player, .facebook-wall{
 	max-width: 600px;
 	width: 75%;
 	margin: 0 auto;
