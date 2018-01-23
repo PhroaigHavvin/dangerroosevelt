@@ -100,15 +100,15 @@ a.svg:after {
 	padding: 25px 0px;
 }
 
-#desktop-facebook{
+#desktop-facebook, #desktop-player{
 	width: 600px;
 }
 
-#tablet-facebook{
+#tablet-facebook, #tablet-player{
 	width: 450px;
 }
 
-#mobile-facebook{
+#mobile-facebook, #tablet-player{
 	width: 340px;
 }
 
