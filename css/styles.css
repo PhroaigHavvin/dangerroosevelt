@@ -58,6 +58,13 @@ a.svg:after {
 	padding-top: 5px;
 }
 
+.content-block{
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 #menu {
 	padding-bottom: 10px;
 }
@@ -88,8 +95,11 @@ a.svg:after {
 	max-width: 800px;
 	width: 70%;
 	margin: 0 auto;
-	margin-bottom: 250px;
 	text-align: justify;
+}
+
+#about-section{
+	padding: 25px 0px;
 }
 
 @media all and (min-width: 960px) {
@@ -103,19 +113,15 @@ a.svg:after {
 	}
 
 	.content-block{
-		margin: 125px auto 125px auto;
+		min-height: calc(100vh - 120px);
 	}
 
-	#music {
-		padding: 125px 0;
+	#home{
+		margin-top: 120px;
 	}
 
-	#about {
-		padding-top: 125px;
-	}
-
-	#home {
-		margin-top: 250px;
+	#top-header{
+		height: 120px;
 	}
 
 	#main-title{
@@ -168,19 +174,15 @@ a.svg:after {
 	}
 
 	.content-block{
-		margin: 100px auto 100px auto;
+		min-height: calc(100vh - 135px);
 	}
 
-	#music {
-		padding: 100px 0;
+	#home{
+		margin-top: 135px;
 	}
 
-	#about {
-		padding-top: 100px;
-	}
-
-	#home {
-		margin-top: 200px;
+	#top-header{
+		height: 135px;
 	}
 
 	#main-title{
@@ -226,19 +228,15 @@ a.svg:after {
 	}
 
 	.content-block{
-		margin: 75px auto 75px auto;
+		min-height: calc(100vh - 90px);
 	}
 
-	#music {
-		padding: 75px 0;
+	#home{
+		margin-top: 90px;
 	}
 
-	#about {
-		padding-top: 75px;
-	}
-
-	#home {
-		margin-top: 150px;
+	#top-header{
+		height: 90px;
 	}
 
 	#main-title{

@@ -18,13 +18,24 @@
 </head>
 <body>
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=177432619521848';
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '177432619521848',
+				xfbml      : true,
+				version    : 'v2.11'
+			});
+			FB.AppEvents.logPageView();
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<div id="social-media-menu">
 		<div id="facebook" class="social-media-icon"><a href="http://www.facebook.com/dangerroosevelt"><img src="static/fb.png" width="48px" height="48px" /></a></div>
 		<div id="soundcloud" class="social-media-icon">
@@ -49,40 +60,44 @@
 		</div>
 	</div>
 	<div id="home" class="content-block">
-		<div id="desktop-facebook" class="facebook-wall">
-			<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="600" data-height="600"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
-		</div>
-		<div id="tablet-facebook" class="facebook-wall">
-			<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="450" data-height="500"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
-		</div>
-		<div id="mobile-facebook" class="facebook-wall">
-			<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="340" data-height="450"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
+		<div id="facebook-section" class="section-content">
+			<div id="desktop-facebook" class="facebook-wall">
+				<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="600" data-height="600"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
+			</div>
+			<div id="tablet-facebook" class="facebook-wall">
+				<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="450" data-height="500"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
+			</div>
+			<div id="mobile-facebook" class="facebook-wall">
+				<div class="fb-page" data-href="https://www.facebook.com/DangerRoosevelt/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="340" data-height="450"><blockquote cite="https://www.facebook.com/DangerRoosevelt/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/DangerRoosevelt/">Danger Roosevelt</a></blockquote></div>
+			</div>
 		</div>
 	</div>
 	<div id="music" class="content-block">
-		<div id="music-player">
+		<div id="music-player" class="section-content">
 			<iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/369032054&amp;color=%2351504e&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" id="desktop-player"></iframe>
 			<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/369032054&amp;color=%23949890&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" id="mobile-player"></iframe>
 		</div>
 	</div>
 	<div id="about" class="content-block">
-		<div id="about-title">About</div>
-		<div id="about-content">
-			<p>The band started coming together in late 2016, when guitarist Justin Ewasko, and drummer Charlie Campo left their previous group wanting something new. They soon met up with newfound friends/long-lost brothers Ryan and Brandon Vasquez on guitar and keys respectively. This began the start of a new team that had similar ambitions. With everyone coming from different musical backgrounds including alt-country, avant-garde funk rock, and punk, they were looking for something fresh. It would only make sense to recruit a metal bass player. Angel Costilla’s sexy beard came into the mix in early 2017 to fill the missing piece of the puzzle. At this point, Danger Roosevelt was born.<br />
-			<br />
-			While taking some time and reimagining works from their former projects, as well as working through some cover songs at first, Danger began meshing, combining, and fusing into something new. Each member brought something different into the space that can only be described as “Not Butt-Rock”. The quintet began recording a demo and working on all new material in the latter part of the year.<br />
-			<br />
-			With the full 11 song demo to be released in early 2018, Danger Roosevelt are ready to take their sound, sight, and smell out of the practice space and onto a stage near you on a city-wide tour!<br />
-			<br />
-			<br />
-			Line-up<br>
-			<ul>
-				<li>Ryan Vasquez - Rhythm/Lead Guitar, Vocals</li>
-				<li>Brandon Vasquez - Keys, Vocals, Backing Guitar</li>
-				<li>Justin Ewasko - Lead Guitar, Backing Vocals</li>
-				<li>Angel Costilla - Bass, Tone</li>
-				<li>Charlie Campo - Drums, Percussion (Triangle)</li>
-			</ul></p>
+		<div id="about-section" class="section-content">
+			<div id="about-title">About</div>
+			<div id="about-content">
+				<p>The band started coming together in late 2016, when guitarist Justin Ewasko, and drummer Charlie Campo left their previous group wanting something new. They soon met up with newfound friends/long-lost brothers Ryan and Brandon Vasquez on guitar and keys respectively. This began the start of a new team that had similar ambitions. With everyone coming from different musical backgrounds including alt-country, avant-garde funk rock, and punk, they were looking for something fresh. It would only make sense to recruit a metal bass player. Angel Costilla’s sexy beard came into the mix in early 2017 to fill the missing piece of the puzzle. At this point, Danger Roosevelt was born.<br />
+				<br />
+				While taking some time and reimagining works from their former projects, as well as working through some cover songs at first, Danger began meshing, combining, and fusing into something new. Each member brought something different into the space that can only be described as “Not Butt-Rock”. The quintet began recording a demo and working on all new material in the latter part of the year.<br />
+				<br />
+				With the full 11 song demo to be released in early 2018, Danger Roosevelt are ready to take their sound, sight, and smell out of the practice space and onto a stage near you on a city-wide tour!<br />
+				<br />
+				<br />
+				Line-up<br>
+				<ul>
+					<li>Ryan Vasquez - Rhythm/Lead Guitar, Vocals</li>
+					<li>Brandon Vasquez - Keys, Vocals, Backing Guitar</li>
+					<li>Justin Ewasko - Lead Guitar, Backing Vocals</li>
+					<li>Angel Costilla - Bass, Tone</li>
+					<li>Charlie Campo - Drums, Percussion (Triangle)</li>
+				</ul></p>
+			</div>
 		</div>
 	</div>
 </body>
