@@ -16,7 +16,7 @@ ul{
 }
 
 a{
-	color: #eee;
+	color: #999;
 	text-decoration: none;
 }
 
@@ -78,8 +78,6 @@ a.svg:after {
 
 #music-player, .facebook-wall{
 	max-width: 600px;
-	width: 75%;
-	margin: 0 auto;
 }
 
 #home {
@@ -100,6 +98,18 @@ a.svg:after {
 
 #about-section{
 	padding: 25px 0px;
+}
+
+#desktop-facebook{
+	width: 600px;
+}
+
+#tablet-facebook{
+	width: 450px;
+}
+
+#mobile-facebook{
+	width: 340px;
 }
 
 @media all and (min-width: 960px) {
