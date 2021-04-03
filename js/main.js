@@ -14,13 +14,13 @@ $(document).ready(function(){
 
 			var menuHeight = $("#top-header").height();
 
-			var offsetMenu = (hash != "#home") ? $(hash).offset().top - menuHeight : 0;
+			var offsetMenu = (hash != "#social-media") ? $(hash).offset().top - menuHeight : 0;
 
 			animating = true;
 
 			$('html,body').animate({
 				scrollTop: offsetMenu
-			}, 1200, function(){animating=false;$(window).scroll()});
+			}, 0, function(){animating=false;$(window).scroll()});
 		}
 	});
 });
